@@ -20,6 +20,10 @@ flutter:
   uses-material-design: true
   assets:
     - assets/mentor_marketing.jpg
+    - assets/mentor_finanzas.jpg
+    - assets/mentor_tecnologia.jpg
+    - assets/mentor_ventas.jpg
+
     
 
   

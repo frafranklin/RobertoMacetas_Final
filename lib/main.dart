@@ -7,6 +7,7 @@ import 'pages/main_screen.dart';
 import 'pages/AsesoriaFinanzas.dart';
 import 'pages/pageMaeketing.dart';
 import 'pages/AsesorVentas.dart';
+import 'pages/AsesoriaTecnologia.dart';
 
 void main() => runApp(AppCorporativa());
 
@@ -28,12 +29,13 @@ class AppCorporativa extends StatelessWidget {
         '/marketingasesoria': (context) => pageMaeketing(),
         '/asesoriafinanzas': (context) => AsesoriaFinanzas(),
         '/capacitacionLiderazgo': (context) => AsesorVentas(),
+        '/asesoriatecnolgia': (context) => AsesoriaTecnologia(),
       },
       theme: ThemeData(
-        primaryColor: Colors.purple,
+        primaryColor: const Color.fromARGB(255, 18, 78, 189),
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: Colors.purple,
-          secondary: Colors.deepPurpleAccent,
+          primary: const Color.fromARGB(255, 26, 179, 47),
+          secondary: const Color.fromARGB(255, 223, 94, 20),
         ),
         fontFamily: 'Roboto',
         textTheme: TextTheme(

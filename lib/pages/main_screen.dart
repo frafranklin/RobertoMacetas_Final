@@ -1,82 +1,109 @@
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatelessWidget {
-  final String username; // Agregamos el nombre del usuario como parámetro
+  final String username; // Parámetro para el nombre del usuario
 
-  MainScreen({required this.username});
+  const MainScreen({Key? key, required this.username}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Portal de Recursos Humanos'),
-        backgroundColor: Colors.purple,
+        elevation: 2,
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.deepPurple, Colors.blueAccent],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        ),
+        title: const Text(
+          'Portal de Recursos Humanos',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.white,
+          ),
+        ),
+        centerTitle: true,
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Mostrar el título centrado con el nombre del usuario
+            // Mensaje de bienvenida
             Text(
-              'Bienvenido, al Portal de \n Recursos Humanos',
+              'Bienvenido, $username\nal Portal de Recursos Humanos',
               textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+                fontSize: 22,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
               ),
             ),
-            const SizedBox(height: 40), // Separación del título y los botones
-            // Botón 1: Asesoria en Marketing
-            SizedBox(
-              width: 250,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/marketingasesoria');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  textStyle: const TextStyle(fontSize: 16),
-                ),
-                child: const Text('Asesoria en Marketing'),
-              ),
+            const SizedBox(height: 40),
+
+            // Botones estilizados
+            _buildProfessionalButton(
+              context,
+              'Asesoría en Marketing',
+              Icons.campaign,
+              '/marketingasesoria',
             ),
             const SizedBox(height: 20),
-            // Botón 2: Auto-Servicio para Empleados
-            SizedBox(
-              width: 250,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/asesoriafinanzas');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  textStyle: const TextStyle(fontSize: 16),
-                ),
-                child: const Text('Asesoria en Finanzas'),
-              ),
+            _buildProfessionalButton(
+              context,
+              'Asesoría en Finanzas',
+              Icons.attach_money,
+              '/asesoriafinanzas',
             ),
             const SizedBox(height: 20),
-            // Botón 3: Asesoria en Ventas
-            SizedBox(
-              width: 250,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/capacitacionLiderazgo');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.blue,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  textStyle: const TextStyle(fontSize: 16),
-                ),
-                child: const Text('Asesoria en Ventas'),
-              ),
+            _buildProfessionalButton(
+              context,
+              'Asesoría en Tecnología',
+              Icons.computer,
+              '/asesoriatecnolgia',
+            ),
+            const SizedBox(height: 20),
+            _buildProfessionalButton(
+              context,
+              'Asesoría en Ventas',
+              Icons.sell,
+              '/capacitacionLiderazgo',
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  // Widget reutilizable para botones estilizados
+  Widget _buildProfessionalButton(
+      BuildContext context, String text, IconData icon, String route) {
+    return SizedBox(
+      width: double.infinity,
+      height: 60,
+      child: ElevatedButton.icon(
+        onPressed: () {
+          Navigator.pushNamed(context, route);
+        },
+        icon: Icon(icon, color: Colors.white, size: 26),
+        label: Text(
+          text,
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.blueAccent,
+          foregroundColor: Colors.white,
+          elevation: 3,
+          shadowColor: Colors.grey.withOpacity(0.4),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
         ),
       ),
     );

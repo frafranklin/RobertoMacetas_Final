@@ -31,7 +31,7 @@ class AsesorVentas extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.asset(
-                  'assets/mentor_marketing.jpg', // Cambia por tu imagen
+                  'assets/mentor_ventas.jpg', // Cambia por tu imagen
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 200,

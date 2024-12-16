@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AsesoriaFinanzas extends StatelessWidget {
-  const AsesoriaFinanzas({super.key});
+class AsesoriaTecnologia extends StatelessWidget {
+  const AsesoriaTecnologia({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Asesoria en Finanzas'),
+        title: const Text('Asesoria en Tecnologia'),
         centerTitle: true,
       ),
       body: Padding(
@@ -31,7 +31,7 @@ class AsesoriaFinanzas extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.asset(
-                  'assets/mentor_finanzas.jpg', // Cambia por tu imagen
+                  'assets/mentor_tecnologia.jpg', // Cambia por tu imagen
                   fit: BoxFit.cover,
                   width: double.infinity,
                   height: 200,
@@ -41,7 +41,7 @@ class AsesoriaFinanzas extends StatelessWidget {
             const SizedBox(height: 16),
             // Título y descripción
             const Text(
-              "Ricardo Cabrera Fidel - Mentor en Finanzas",
+              "Juan Pérez - Mentor en Marketing",
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -50,7 +50,7 @@ class AsesoriaFinanzas extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const Text(
-              "Con más de 10 años de experiencia en Finanzas Empresariales y estrategias comerciales, Juan ha ayudado a más de 100 empresas a alcanzar sus objetivos de negocio mediante campañas efectivas. Su enfoque práctico garantiza resultados visibles en el corto plazo.",
+              "Con más de 10 años de experiencia en marketing digital y estrategias comerciales, Juan ha ayudado a más de 100 empresas a alcanzar sus objetivos de negocio mediante campañas efectivas. Su enfoque práctico garantiza resultados visibles en el corto plazo.",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.black54,
