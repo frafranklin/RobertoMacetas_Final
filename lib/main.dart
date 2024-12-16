@@ -4,9 +4,9 @@ import 'pages/login_screen.dart';
 import 'pages/register_screen.dart';
 import 'pages/main_screen.dart';
 
-import 'pages/AutoServicioparaEmpleados.dart';
-import 'pages/GestiondeNominayBeneficios.dart';
-import 'pages/ReclutamientoySeleccion.dart';
+import 'pages/AsesoriaFinanzas.dart';
+import 'pages/pageMaeketing.dart';
+import 'pages/AsesorVentas.dart';
 
 void main() => runApp(AppCorporativa());
 
@@ -23,11 +23,11 @@ class AppCorporativa extends StatelessWidget {
         '/register': (context) => RegisterScreen(),
         // Pasar un valor predeterminado a MainScreen
         '/main': (context) => MainScreen(username: 'Usuario'),
-       
+
         // Rutas del segundo bloque
-        '/capacitacionTecnica': (context) => GestiondeNominayBeneficios(),
-        '/capacitacionSeguridad': (context) => AutoServicioparaEmpleados(),
-        '/capacitacionLiderazgo': (context) => ReclutamientoySeleccion(),
+        '/marketingasesoria': (context) => pageMaeketing(),
+        '/asesoriafinanzas': (context) => AsesoriaFinanzas(),
+        '/capacitacionLiderazgo': (context) => AsesorVentas(),
       },
       theme: ThemeData(
         primaryColor: Colors.purple,

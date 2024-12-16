@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class GestiondeNominayBeneficios extends StatelessWidget {
-  const GestiondeNominayBeneficios({super.key});
+class pageMaeketing extends StatelessWidget {
+  const pageMaeketing({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Gestión de Nómina y Beneficios'),
+        title: const Text('Asesoria en Marketing'),
         centerTitle: true,
       ),
       body: Padding(

@@ -26,12 +26,12 @@ class MainScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40), // Separación del título y los botones
-            // Botón 1: Gestión de Nómina y Beneficios
+            // Botón 1: Asesoria en Marketing
             SizedBox(
               width: 250,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/capacitacionTecnica');
+                  Navigator.pushNamed(context, '/marketingasesoria');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -39,7 +39,7 @@ class MainScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                child: const Text('Gestión de Nómina y Beneficios'),
+                child: const Text('Asesoria en Marketing'),
               ),
             ),
             const SizedBox(height: 20),
@@ -48,7 +48,7 @@ class MainScreen extends StatelessWidget {
               width: 250,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/capacitacionSeguridad');
+                  Navigator.pushNamed(context, '/asesoriafinanzas');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -56,11 +56,11 @@ class MainScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                child: const Text('Auto-Servicio para Empleados'),
+                child: const Text('Asesoria en Finanzas'),
               ),
             ),
             const SizedBox(height: 20),
-            // Botón 3: Reclutamiento y Selección
+            // Botón 3: Asesoria en Ventas
             SizedBox(
               width: 250,
               child: ElevatedButton(
@@ -73,7 +73,7 @@ class MainScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                child: const Text('Reclutamiento y Selección'),
+                child: const Text('Asesoria en Ventas'),
               ),
             ),
           ],
